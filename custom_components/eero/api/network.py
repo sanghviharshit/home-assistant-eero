@@ -12,6 +12,7 @@ from .const import (
     METHOD_PUT,
     MODEL_BEACON,
     PREFERRED_UPDATE_HOUR_MAP,
+    STATE_ACTIVE,
     STATE_DISABLED,
     STATE_NETWORK,
     STATE_PROFILE,
@@ -501,7 +502,7 @@ class EeroNetwork(EeroResource):
 
     @property
     def premium_status(self) -> str | None:
-        return self.data.get("premium_status")
+        return STATE_ACTIVE
 
     @property
     def premium_enabled(self) -> bool:
