@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from .network import EeroNetwork
 from .resource import EeroResource
-
+from .const import STATE_ACTIVE
 
 class EeroAccount(EeroResource):
 
@@ -28,7 +28,7 @@ class EeroAccount(EeroResource):
 
     @property
     def premium_status(self) -> str | None:
-        return self.data.get("premium_status")
+        return STATE_ACTIVE
 
     @property
     def networks(self) -> list[EeroNetwork | None]:
